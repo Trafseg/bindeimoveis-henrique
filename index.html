@@ -134,7 +134,7 @@ function render(){
  document.querySelector('[role=progressbar]').setAttribute('aria-valuenow',pct);
  if(finished){
  const rows=list.map(q=>[LABELS[q.id],q.id]);
- const intro='Olá, Bindé Imóveis! Preenchi o formulário e gostaria de receber opções de imóveis para o meu perfil.';
+ const intro='Olá, Henrique! Preenchi o formulário e gostaria de receber opções de imóveis para o meu perfil.';
  const message=intro+'\n\n'+rows.map(([label,id])=>label+': '+answers[id]).join('\n')+(ORIGEM.ad?'\nImóvel de interesse: '+imovelAmigavel(ORIGEM.ad):'');
  const whatsappLink='https://wa.me/'+WHATSAPP_NUMERO+'?text='+encodeURIComponent(message);
  const leadPhoneDigits=(answers.phone||'').replace(/\D/g,'');
